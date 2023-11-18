@@ -53,17 +53,17 @@ namespace _4RTools.Forms
 
                 if (tag != AppConfig.Version)
                 {
-                    string downloadUrl = obj["assets"][0]["browser_download_url"].ToString(); //Latest download url
-                    string fileName = obj["assets"][0]["name"].ToString(); //Latest file name
-                    //If different, 4R is outdated.
-                    //Need to download and update
-                    await Download(downloadUrl, fileName); //Download the .rar file
-                    RarArchive arch = new RarArchive(fileName);
-                    File.Move(sourceFileName, oldFileName);
-                    arch.ExtractToDirectory(".");
-                    arch.Dispose();
-                    File.Delete(fileName); //Delete .rar file downloaded
-                    Environment.Exit(0);
+                    //string downloadUrl = obj["assets"][0]["browser_download_url"].ToString(); //Latest download url
+                    //string fileName = obj["assets"][0]["name"].ToString(); //Latest file name
+                    ////If different, 4R is outdated.
+                    ////Need to download and update
+                    //await Download(downloadUrl, fileName); //Download the .rar file
+                    //RarArchive arch = new RarArchive(fileName);
+                    //File.Move(sourceFileName, oldFileName);
+                    //arch.ExtractToDirectory(".");
+                    //arch.Dispose();
+                    //File.Delete(fileName); //Delete .rar file downloaded
+                    //Environment.Exit(0);
                 }
 
             }

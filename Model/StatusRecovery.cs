@@ -29,6 +29,7 @@ namespace _4RTools.Model
             Client roClient = ClientSingleton.GetClient();
             _4RThread statusEffectsThread = new _4RThread(_ =>
             {
+                bool found = false;
                 for (int i = 0; i <= Constants.MAX_BUFF_LIST_INDEX_SIZE - 1; i++)
                 {
                     uint currentStatus = c.CurrentBuffStatusCode(i);
@@ -40,6 +41,7 @@ namespace _4RTools.Model
                         if (Enum.IsDefined(typeof(EffectStatusIDs), currentStatus))
                         {
                             this.useStatusRecovery(key);
+                            Thread.Sleep(5000);
                         }
                     }
                 }

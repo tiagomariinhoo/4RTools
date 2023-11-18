@@ -21,6 +21,9 @@ namespace _4RTools.Utils
         CRITICALWOUND = 286,
         OVERHEAT = 373,
 
+        UNDEAD_SCROLL = 2000,
+        SIT = 622,
+
         ENDURE = 1,
         PAINKILLER = 1,
 

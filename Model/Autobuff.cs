@@ -65,7 +65,7 @@ namespace _4RTools.Model
                     else if (c.ReadCurrentHp() >= Constants.MINIMUM_HP_TO_RECOVER)
                     {
                         this.useAutobuff(item.Value);
-                        Thread.Sleep(10);
+                        Thread.Sleep(15000);
                     }
                 }
 
